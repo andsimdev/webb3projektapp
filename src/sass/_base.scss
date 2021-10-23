@@ -1,0 +1,206 @@
+* {
+    transition: ease-in-out 0.15s;
+}
+
+// Ange bakgrund för hela sidan
+body {
+    background-color: $background;
+}
+
+// Sidhuvud
+header {
+    background-color: brown;
+    z-index: 1000;
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+}
+
+// Huvudmenyn
+nav {
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background: $background;
+    padding-top: 0;
+    padding-left: 3%;
+    padding-right: 0;
+    padding-bottom: 3%;
+    width: fit-content;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px 1px grey;
+
+    // Menyknapp
+    button {
+        background: none;
+        border: none;
+        width: 75px;
+        height: 75px;
+        align-self: flex-end;
+        border-radius: 25px;
+
+        img {
+            width: 75px;
+            height: 75px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 15px 1px $primarycolor;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 35px;
+        margin-right: 75px;
+        list-style-type: none;
+        height: 125px;
+        width: fit-content;
+    }
+    
+
+    a {
+        color: $textcolor;
+        font-size: 1.2rem;
+        font-weight: 500;
+
+        &:hover {
+            color: $primarycolor;
+        }
+    }
+}
+
+main {
+    width: 100%;
+    margin: auto;
+}
+
+// Allmänt för sektioner
+section {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 200px;
+}
+
+// Herosektion
+#hero {
+    display: flex;
+    justify-content: flex-start;
+    height: 50vh;
+    max-width: 1100px;
+    margin: auto;
+
+    .herotextdiv {
+        align-self: center;
+        max-width: 350px;
+
+        h1 {
+            font-size: 6rem;
+            font-weight: 300;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 200;
+            color: #C2C2C2;
+        }
+    }
+
+    .heroimgdiv {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        margin-left: 10%;
+        width: 60vw;
+        min-width: 500px;
+        max-width: 1200px;
+        height: 90%;
+        top: 10%;
+        right: 0;
+        overflow:hidden;
+        z-index: -1000;
+
+        .heroimgdivcontainer {
+            display: flex;
+            align-items: center;
+            transform: rotate(45deg);
+            margin-top: 55%;
+
+            .heroimgdivcolumn {
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+
+                img {
+                    width: 11vw;
+                    height: 19vw;
+                    max-width: 250px;
+                    max-height: 400px;
+                    border-radius: 25px;
+                    background-color: $primarycolor;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+// Portfoliosektion
+#portfolio {
+    background-color: $background;
+    box-shadow: 0 -50px 9px 20px $background;
+    margin-top: 60px;
+    h1 {
+        font-size: 4rem;
+        font-weight: 200;
+    }
+}
+
+// CV-sektion
+#cv {
+    h1 {
+        font-size: 4rem;
+        font-weight: 200;
+    }
+}
+
+// Kontaktsektion
+#contact {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 200;
+    }
+    .contactdiv {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .contactdiv p {
+        font-size: 2rem;
+        margin-right: 0.25em;
+    }
+    a {
+
+        font-size: 1.5rem;
+    }
+}
