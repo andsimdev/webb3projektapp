@@ -1,0 +1,33 @@
+{
+  "name": "webb3app",
+  "version": "1.0.0",
+  "description": "> Den publika webbplatsen ansluter till och läser in data från den skapade REST-webbtjänsten och presenterar den i ett enhetligt och designat graftiskt gränssnitt.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andsimdev/webb3app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.0.1",
+    "sass": "^1.39.2"
+  },
+  "bugs": {
+    "url": "https://github.com/andsimdev/webb3app/issues"
+  },
+  "homepage": "https://github.com/andsimdev/webb3app#readme"
+}
