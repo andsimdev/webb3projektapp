@@ -11,6 +11,7 @@ const studiescontainerEl = document.getElementById("studiescontainer");
 const employmentscontainerEl = document.getElementById("employmentscontainer");
 const navEl = document.getElementById("nav");
 const navulEl = document.getElementById("navul");
+const menuiconEl = document.getElementById("menuicon");
 
 // Kör initieringsfunktionen då webbplatsen laddats
 window.onload = init();
@@ -107,11 +108,13 @@ function toggleMenu() {
         navulEl.style.display = "none";
         navEl.style.padding = "0";
         navEl.style.boxShadow = "none";
+        menuiconEl.src = "images/menu.svg";
     } else if (navulEl.style.display == "none") {
         navulEl.style.display = "flex";
         navEl.style.paddingLeft = "3%";
         navEl.style.paddingBottom = "3%";
-        navEl.style.boxShadow = "0px 0px 15px 1px grey";
+        navEl.style.boxShadow = "0px 0px 10px 1px grey";
+        menuiconEl.src = "images/closemenu.svg";
     }
 
 }
