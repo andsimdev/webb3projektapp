@@ -12,14 +12,14 @@
 <body>
 
     <header>
-        <nav>
-            <button>
+        <nav id="nav">
+            <button onclick="toggleMenu()">
                 <img src="images/menu.svg" alt="">
             </button>
-            <ul>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">CV</a></li>
-                <li><a href="#">Kontakt</a></li>
+            <ul id="navul">
+                <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
+                <li><a href="#cv" onclick="toggleMenu()">CV</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -51,7 +51,7 @@
         <section id="portfolio">
             <div class="container">
                 <h1>Vad jag skapat ✨</h1>
-
+                <div id="websitescontainer"></div>
             </div>
         </section>
 
@@ -59,6 +59,27 @@
         <section id="cv">
             <div class="container">
                 <h1>Vad jag studerat och jobbat med 🌱</h1>
+                <div class="studempdiv">
+
+                    <div class="studiesdiv">
+                        <h2>Utbildning</h2>
+                        <div id="studiescontainer"></div>
+                    </div>
+
+                    <div class="employmentsdiv">
+                        <h2>Arbeten</h2>
+                        <div id="employmentscontainer">
+                            <div>
+                                <h3>Ambulanssjuksköterska</h3>
+                                <p>Lunds ambulans</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
             </div>
         </section>
 
@@ -80,7 +101,7 @@
     </main>
 
 
-
+    <script src="js/main.js"></script>
 </body>
 
 </html>
