@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Simon Andersson - portfolio</title>
+</head>
+
+<body>
+    <!--Sidhuvud med meny-->
+    <header>
+        <nav id="nav">
+            <button onclick="toggleMenu()">
+                <img src="images/menu.svg" alt="" id="menuicon">
+            </button>
+            <ul id="navul" style="display:none;">
+                <li><a href="#hero" onclick="toggleMenu()">Start</a></li>
+                <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
+                <li><a href="#cv" onclick="toggleMenu()">CV</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Huvudinnehåll-->
+    <main>
+        <!--Hero-sektion-->
+        <section id="hero">
+            <div class="herotextdiv">
+                <h1>Hej! 👋</h1>
+                <h2>Jag heter <span id="mark">Simon</span> och utvecklar för webben</h2>
+            </div>
+            <div class="heroimgdiv">
+                <div id="heroimgdivcontainer"></div>
+            </div>
+        </section>
+
+        <!--Portfolio-sektion-->
+        <section id="portfolio">
+            <div class="container">
+                <h1>Vad jag skapat ✨</h1>
+                <div id="websitescontainer"></div>
+            </div>
+        </section>
+
+        <!--CV-sektion-->
+        <section id="cv">
+            <div class="container">
+                <h1>Vad jag studerat och jobbat med 🌱</h1>
+                <div class="studempdiv">
+                    <div class="studiesdiv">
+                        <h2>Utbildning</h2>
+                        <div id="studiescontainer"></div>
+                    </div>
+                    <div class="employmentsdiv">
+                        <h2>Arbeten</h2>
+                        <div id="employmentscontainer">
+                            <div>
+                                <h3>Ambulanssjuksköterska</h3>
+                                <p>Lunds ambulans</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Kontakt-sektion-->
+        <section id="contact">
+            <div class="container">
+                <h1>Kontakta mig! 📯</h1>
+
+                <div class="contactdiv">
+                    <p>📧</p>
+                    <a href="#">sian2001@student.miun.se</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--Länk till JavaScript-fil-->
+    <script src="js/main.js"></script>
+</body>
+</html>
