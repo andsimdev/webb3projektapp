@@ -1,9 +1,10 @@
 "use strict";
 
 // URL för de olika webbtjänsterna
-const studurl = "http://localhost/webbutveckling3/projekt/api/studiesapi.php";
-const empurl = "http://localhost/webbutveckling3/projekt/api/employmentsapi.php";
-const weburl = "http://localhost/webbutveckling3/projekt/api/websitesapi.php";
+const rooturl = "https://studenter.miun.se/~sian2001/writeable/dt173g/projekt/api/";
+const studurl = "https://studenter.miun.se/~sian2001/writeable/dt173g/projekt/api/studiesapi.php";
+const empurl = "https://studenter.miun.se/~sian2001/writeable/dt173g/projekt/api/employmentsapi.php";
+const weburl = "https://studenter.miun.se/~sian2001/writeable/dt173g/projekt/api/websitesapi.php";
 
 // HTML-element
 const websitescontainerEl = document.getElementById("websitescontainer");
@@ -45,16 +46,16 @@ function printHero() {
             heroimgdivcontainerEl.innerHTML +=
                 `
                     <div class="heroimgdivcolumn">
-                        <img src="http://localhost/webbutveckling3/projekt/api/${data[0].siteimage}" alt="">
-                        <img src="http://localhost/webbutveckling3/projekt/api/${data[1].siteimage}" alt="">
-                        <img src="http://localhost/webbutveckling3/projekt/api/${data[2].siteimage}" alt="">
+                        <img src="${rooturl}${data[0].siteimage}" alt="">
+                        <img src="${rooturl}${data[1].siteimage}" alt="">
+                        <img src="${rooturl}${data[2].siteimage}" alt="">
                     </div>
                     <div class="heroimgdivcolumn">
-                        <img src="http://localhost/webbutveckling3/projekt/api/${data[3].siteimage}" alt="">
-                        <img src="http://localhost/webbutveckling3/projekt/api/${data[4].siteimage}" alt="">
+                        <img src="${rooturl}${data[3].siteimage}" alt="">
+                        <img src="${rooturl}${data[4].siteimage}" alt="">
                     </div>
                     <div class="heroimgdivcolumn">
-                        <img src="http://localhost/webbutveckling3/projekt/api/${data[5].siteimage}" alt="">
+                        <img src="${rooturl}${data[5].siteimage}" alt="">
                     </div>
                 `
         })
@@ -77,7 +78,7 @@ function printPortfolio() {
                 websitescontainerEl.innerHTML +=
                     `
                 <div class="websitediv">
-                <img src="http://localhost/webbutveckling3/projekt/api/${website.siteimage}" alt="" class="websiteimg">
+                <img src="${rooturl}${website.siteimage}" alt="" class="websiteimg">
                 <h2>${website.sitetitle}</h2>
                 <p>${website.sitedesc}</p>
                 <a href="${website.siteurl}">Besök ${website.sitetitle}</a>
