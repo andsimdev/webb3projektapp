@@ -1,7 +1,9 @@
+// Ange animation för alla övergångar
 * {
     transition: ease-in-out 0.15s;
 }
 
+// Ange skroll-beteende vid klick på länkar till exempelvis sektioner
 html {
     scroll-behavior: smooth;
 }
@@ -56,6 +58,7 @@ nav {
         }
     }
 
+    // Menylistan
     ul {
         display: flex;
         flex-direction: column;
@@ -73,7 +76,7 @@ nav {
         }
     }
     
-
+    // Menylänkar
     a {
         color: $textcolor;
         font-size: 1.2rem;
@@ -85,6 +88,7 @@ nav {
     }
 }
 
+// Huvudinnehållet
 main {
     width: 100%;
     margin: auto;

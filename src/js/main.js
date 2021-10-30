@@ -41,8 +41,7 @@ function printHero() {
     fetch(weburl)
         .then((res) => res.json())
         .then((data) => {
-            console.log(data);
-            console.log(data[0].siteimage);
+            // Skriv ut webbsidebilder i hero-sektionen
             heroimgdivcontainerEl.innerHTML +=
                 `
                     <div class="heroimgdivcolumn">
@@ -61,7 +60,6 @@ function printHero() {
         })
         // Fånga och skriv ut eventuella fel till konsolen
         .catch(error => console.log(error));
-
 }
 
 // Funktion för att skriva ut all portfoliodata
@@ -75,6 +73,7 @@ function printPortfolio() {
         .then((data) => {
             // Loopa igenom all data
             data.forEach(website => {
+                // Skriv ut webbsidorna i portfolio-sektionen
                 websitescontainerEl.innerHTML +=
                     `
                 <div class="websitediv">
@@ -101,6 +100,7 @@ function printStudies() {
         .then((data) => {
             // Loopa igenom all data
             data.forEach(studies => {
+                // Skriv ut studier i cv-sektionen
                 studiescontainerEl.innerHTML +=
                     `
                     <div>
@@ -125,6 +125,7 @@ function printEmployments() {
         .then((data) => {
             // Loopa igenom all data
             data.forEach(employment => {
+                // Skriv ut arbeten i cv-sektionen
                 employmentscontainerEl.innerHTML +=
                     `
                     <div>
@@ -140,8 +141,6 @@ function printEmployments() {
 
 // Funktion för att visa/dölja menyn
 function toggleMenu() {
-    console.log("Kör toggleMenu...");
-
     if (navulEl.style.display != "none") {
         navulEl.style.display = "none";
         navEl.style.padding = "0";
@@ -154,5 +153,4 @@ function toggleMenu() {
         navEl.style.boxShadow = "0px 0px 10px 1px grey";
         menuiconEl.src = "images/closemenu.svg";
     }
-
 }
