@@ -9,3 +9,10 @@ $linkcolor: #F9704D;
 
 // Primärfärg
 $primarycolor: #41F9BF;
+
+// Mixin med media query för mobilstorlek
+@mixin phone {
+    @media screen and(max-width: 800px){
+        @content;
+    }
+}

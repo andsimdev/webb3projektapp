@@ -32,6 +32,11 @@ nav {
     width: fit-content;
     border-radius: 25px;
 
+    @include phone {
+        top: 25px;
+        right: 25px;
+    }
+
     // Menyknapp
     button {
         background: none;
@@ -60,6 +65,12 @@ nav {
         list-style-type: none;
         height: 145px;
         width: fit-content;
+
+        @include phone {
+            margin-top: 25px;
+            margin-left: 15px;
+            margin-bottom: 15px;
+        }
     }
     
 
@@ -77,6 +88,10 @@ nav {
 main {
     width: 100%;
     margin: auto;
+
+    @include phone {
+        width: 90%;
+    }
 }
 
 // Allmänt för sektioner
@@ -85,12 +100,19 @@ section {
     justify-content: center;
     min-height: 100vh;
     width: 100%;
+
+    @include phone {
+        min-height: 75vh;
+    }
 }
 
 .container {
     width: 100%;
     max-width: 1100px;
     margin-top: 150px;
+    @include phone {
+        margin-top: 100px;
+    }
 }
 
 // Herosektion
@@ -101,6 +123,14 @@ section {
     max-width: 1100px;
     margin: auto;
 
+    @include phone {
+        flex-direction: column;
+        margin-top: 25vh;
+        justify-content: "";
+        max-height: 500px;
+        height: 35vh;
+    }
+
     .herotextdiv {
         align-self: center;
         max-width: 350px;
@@ -108,12 +138,24 @@ section {
         h1 {
             font-size: 6rem;
             font-weight: 300;
+
+            @include phone {
+                font-size: 4.5rem;
+            }
         }
 
         h2 {
             font-size: 2rem;
             font-weight: 200;
             color: #C2C2C2;
+
+            #mark {
+                color: $primarycolor;
+            }
+
+            @include phone {
+                font-size: 1.5rem;
+            }
         }
     }
 
@@ -131,11 +173,21 @@ section {
         right: 0;
         overflow:hidden;
 
-        .heroimgdivcontainer {
+        @include phone {
+            min-width: 300px;
+            top: 50%;
+        }
+
+        #heroimgdivcontainer {
             display: flex;
             align-items: center;
             transform: rotate(45deg);
             margin-top: 10%;
+
+            @include phone {
+                margin-top: 0;
+                margin-right: -15%;
+            }
 
             .heroimgdivcolumn {
                 display: flex;
@@ -143,6 +195,7 @@ section {
                 margin: 10px;
 
                 img {
+                    object-fit: cover;
                     width: 11vw;
                     height: 19vw;
                     max-width: 250px;
@@ -150,6 +203,12 @@ section {
                     border-radius: 25px;
                     background-color: $primarycolor;
                     margin: 10px 0;
+                    filter: opacity(0.75);
+
+                    @include phone {
+                        width: 15vw;
+                        height: 25vw;
+                    }
                 }
             }
         }
@@ -159,9 +218,17 @@ section {
 // Portfoliosektion
 #portfolio {
     margin-top: 60px;
+
+    @include phone {
+        margin-top: 0;
+    }
     h1 {
         font-size: 3.5rem;
         font-weight: 200;
+
+        @include phone {
+            font-size: 2.5rem;
+        }
     }
     #websitescontainer {
         width: 100%;
@@ -175,6 +242,21 @@ section {
             width: 450px;
             height: 450px;
             margin: 100px 0;
+
+            h2 {
+                color: $primarycolor;
+                font-weight: 300;
+            }
+
+            a {
+                float: right;
+            }
+
+
+            @include phone {
+                width: 90vw;
+                height: 90vw;
+            }
 
             .websiteimg {
                 object-fit: cover;
@@ -191,16 +273,38 @@ section {
     .studempdiv {
         display: flex;
         justify-content: space-evenly;
+
+        @include phone {
+            flex-direction: column;
+        }
     }
     h1 {
         font-size: 3.5rem;
         font-weight: 200;
         margin-bottom: 100px;
+
+        @include phone {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+    }
+
+    .studiesdiv {
+        @include phone {
+            margin-bottom: 50px;
+        }
     }
 
     h2 {
+        font-size: 2.5rem;
         font-weight: 300;
         margin-bottom: 50px;
+        color: $primarycolor;
+
+        @include phone {
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
     }
 
     #studiescontainer {
@@ -212,14 +316,29 @@ section {
 
 // Kontaktsektion
 #contact {
+    @include phone {
+        margin-top: 50%;
+        height: 50vh !important;
+        max-height: 400px !important;
+        min-height: 0 !important;
+    }
+
     .container {
         flex-direction: column;
         justify-content: center;
+
+    @include phone {
+        height: 25vh;
+    }
     }
 
     h1 {
         font-size: 3.5rem;
         font-weight: 200;
+
+        @include phone {
+            font-size: 2.5rem;
+        }
     }
     .contactdiv {
         margin-top: 10%;
@@ -232,7 +351,10 @@ section {
         margin-right: 0.25em;
     }
     a {
-
         font-size: 1.5rem;
+
+        @include phone {
+            font-size: 1rem;
+        }
     }
 }

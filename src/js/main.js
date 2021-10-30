@@ -12,11 +12,15 @@ const employmentscontainerEl = document.getElementById("employmentscontainer");
 const navEl = document.getElementById("nav");
 const navulEl = document.getElementById("navul");
 const menuiconEl = document.getElementById("menuicon");
+const heroimgdivcontainerEl = document.getElementById("heroimgdivcontainer");
 
 // Kör initieringsfunktionen då webbplatsen laddats
 window.onload = init();
 
 function init() {
+    // Kör funktionen för att skriva ut hero-bilder
+    printHero();
+
     // Kör funktionen för att skriva ut portfolio-datan
     printPortfolio();
 
@@ -25,6 +29,38 @@ function init() {
 
     // Kör funktionen för att skriva ut arbets-datan
     printEmployments();
+}
+
+// Funktion för att skriva ut hero-bilder
+function printHero() {
+    // Rensa bilder
+    heroimgdivcontainerEl.innerHTML = "";
+
+    // Hämta data från webbtjänsten
+    fetch(weburl)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            console.log(data[0].siteimage);
+            heroimgdivcontainerEl.innerHTML +=
+                `
+                    <div class="heroimgdivcolumn">
+                        <img src="http://localhost/webbutveckling3/projekt/api/${data[0].siteimage}" alt="">
+                        <img src="http://localhost/webbutveckling3/projekt/api/${data[1].siteimage}" alt="">
+                        <img src="http://localhost/webbutveckling3/projekt/api/${data[2].siteimage}" alt="">
+                    </div>
+                    <div class="heroimgdivcolumn">
+                        <img src="http://localhost/webbutveckling3/projekt/api/${data[3].siteimage}" alt="">
+                        <img src="http://localhost/webbutveckling3/projekt/api/${data[4].siteimage}" alt="">
+                    </div>
+                    <div class="heroimgdivcolumn">
+                        <img src="http://localhost/webbutveckling3/projekt/api/${data[5].siteimage}" alt="">
+                    </div>
+                `
+        })
+        // Fånga och skriv ut eventuella fel till konsolen
+        .catch(error => console.log(error));
+
 }
 
 // Funktion för att skriva ut all portfoliodata
@@ -43,7 +79,8 @@ function printPortfolio() {
                 <div class="websitediv">
                 <img src="http://localhost/webbutveckling3/projekt/api/${website.siteimage}" alt="" class="websiteimg">
                 <h2>${website.sitetitle}</h2>
-                <a href="${website.siteurl}">Länk - läs mer</a>
+                <p>${website.sitedesc}</p>
+                <a href="${website.siteurl}">Besök ${website.sitetitle}</a>
                 </div>
                 `
             })
@@ -97,14 +134,14 @@ function printEmployments() {
             })
         })
         // Fånga och skriv ut eventuella fel till konsolen
-        .catch(error => console.log(error));    
+        .catch(error => console.log(error));
 }
 
 // Funktion för att visa/dölja menyn
 function toggleMenu() {
     console.log("Kör toggleMenu...");
 
-    if(navulEl.style.display != "none") {
+    if (navulEl.style.display != "none") {
         navulEl.style.display = "none";
         navEl.style.padding = "0";
         navEl.style.boxShadow = "none";
