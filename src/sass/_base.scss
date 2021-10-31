@@ -130,7 +130,6 @@ section {
     @include phone {
         flex-direction: column;
         margin-top: 25vh;
-        justify-content: "";
         max-height: 500px;
         height: 35vh;
     }
